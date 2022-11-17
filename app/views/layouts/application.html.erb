@@ -8,6 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= simple_form_for(movies) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :list %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>
   </head>
 
   <body>
