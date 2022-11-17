@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :movies do
-    collection do
-      get 'pages/home'
-      root to: 'articles#index'
-    end
+  root to: 'lists#index'
+  resources :lists do
+    resources :bookmarks
   end
+  resources :bookmarks, only: [:destroy]
+  
 end
